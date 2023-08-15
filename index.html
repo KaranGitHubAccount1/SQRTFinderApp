@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>App By Karan Toraskar</title>
+<style>
+*{font-size:50px;background-color:lightyellow;}
+</style>
+<script>
+function find()
+{
+event.preventDefault();
+let num=document.getElementById("num");
+let ans=document.getElementById("ans");
+if (num.value=="")
+{
+alert("U did not enter any number!!");
+ans.innerHTML="";
+num.focus();
+return;
+}
+let n=parseFloat(num.value)
+let r=n**0.5;
+ans.innerHTML=r.toFixed(2);
+}
+</script>
+</head>
+<body>
+<center>
+	<h1>Square Root Finder</h1>
+	<form onsubmit="find()">
+	<input type="number" placeholder="Enter Integer" step=any id="num"/>
+	<br><br>
+	<input type="Submit" value="FIND"/>
+	</form>
+	<h1 id="ans"/>
+</center>
+</body>
+</html>
